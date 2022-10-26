@@ -1,1 +1,32 @@
-<p>listado works.</p>
+<h1>Listado de Heroes</h1>
+<mat-divider></mat-divider>
+<!--<ul>
+    <li *ngFor="let heroe of heroes">{{heroe.superhero}}</li>
+</ul>-->
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center stretch" fxLayoutGap="20px">
+    <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let heroe of heroes">
+        <!--<mat-card-header>
+            <mat-card-title>{{heroe.superhero}}</mat-card-title>
+            <mat-card-subtitle>{{heroe.alter_ego}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/heroes/{{heroe.id}}.jpg" alt="">
+        <mat-card-content>
+            <h3>{{heroe.publisher}}</h3>
+            <p>
+                <strong>Primera aparición {{heroe.first_appearance}}</strong>
+                <br>
+                <strong>Personajes {{heroe.characters}}</strong>
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="warm" [routerLink]="['/heroes',heroe.id]">
+                Leer más...
+            </button>
+            <button mat-button color="info" [routerLink]="['/heroes/editar',heroe.id]">
+                Editar
+            </button>
+        </mat-card-actions>-->
+        <app-heroe-tarjeta></app-heroe-tarjeta>
+    </div>
+</div>
