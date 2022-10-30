@@ -10,6 +10,8 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { DynamicFormsMaterialUIModule } from "@ng-dynamic-forms/ui-material";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,8 +26,11 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
   imports: [
     CommonModule,
     FlexLayoutModule,
+    FormsModule,
     HeroesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    DynamicFormsMaterialUIModule,
+    ReactiveFormsModule
   ]
 })
 export class HeroesModule { }
